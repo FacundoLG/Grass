@@ -1,0 +1,60 @@
+.Nav{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 100vh;
+    background: #d9ed92;
+    padding: 0px;
+    margin: 0px;
+}
+.brandContainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 70px;
+}
+.brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b5e48c;
+    background: #168aad;
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+}
+.options{
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.option{
+    display: flex;
+    width: 90%;
+    margin: 2px 0px;
+    background: #168aad;
+    padding: 8px 5px;
+    font-size: 20px;
+    border-radius: 0px 20px 20px 0px;
+    color: #b5e48c;
+}
+.option:hover{
+    opacity: 0.9;
+    cursor: pointer;
+    transition: 200ms;
+}
+.small{
+    width: 40px;
+}
+.medium{
+    width: 150px;
+}
+.icon{
+    margin: 0px 5px;
+}
