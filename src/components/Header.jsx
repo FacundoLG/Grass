@@ -11,7 +11,7 @@ const Header = () => {
                     <h2 className="brand">Grass</h2>
                 </div>
            </div>
-           <Input/>
+           <Input search={true}/>
            <div className="right">
                 <BsCloudFill className="icon"/>
            </div>

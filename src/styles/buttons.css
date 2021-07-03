@@ -1,0 +1,11 @@
+.addButton {
+  margin-top: 5px;
+  padding: 8px 13px;
+  border: none;
+  border-radius: 5px;
+  background: var(--header-main-color);
+}
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}

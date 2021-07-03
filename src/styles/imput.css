@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   /* background: var(--form-color); */
-  width: 50vw;
-  max-width: 290px;
+  width: 70vw;
+  max-width: 320px;
   height: 32px;
   padding: 0px 10px;
   border: solid 1px white;
