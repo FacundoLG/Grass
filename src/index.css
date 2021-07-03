@@ -1,4 +1,11 @@
-html{
-  min-width: 100vw;
-  min-height: 100vh;
+* {
+  color: white;
+}
+body {
+  background: rgb(35, 35, 35);
+}
+:root {
+  --header-main-color: #99d98c;
+  --brand-font-color: white;
+  --form-color: rgb(35, 35, 35);
 }

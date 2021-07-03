@@ -1,0 +1,39 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background: var(--header-main-color);
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+.brand {
+  margin-left: 5px;
+  color: var(--brand-font-color);
+}
+.list {
+  margin-left: 10px;
+  transition: 200ms;
+  font-size: 30px;
+  border-radius: 20px;
+  padding: 3px;
+}
+.list:hover {
+  cursor: pointer;
+}
+.list:active {
+  background: rgba(0, 0, 0, 0.153);
+  border-radius: 20px;
+  transition: 200ms;
+}
+
+.icon {
+  font-size: 18px;
+}
+.right {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
