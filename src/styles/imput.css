@@ -17,3 +17,7 @@
   border: none;
   height: 100%;
 }
+.Input input::placeholder {
+  color: white;
+  opacity: 0.8;
+}
