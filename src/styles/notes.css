@@ -1,5 +1,21 @@
 .Notes {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.noteContainer {
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.note {
+    width: 90vw;
+    max-width: 300px;
+    height: auto;
+    background: var(--header-main-color);
+    margin: 15px 5px 0px 5px;
+    padding: 10px;
+    border-radius: 10px;
 }

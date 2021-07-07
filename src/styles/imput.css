@@ -1,23 +1,22 @@
 .Input {
-  display: flex;
-  align-items: center;
-  /* background: var(--form-color); */
-  width: 70vw;
-  max-width: 320px;
-  height: 32px;
-  padding: 0px 10px;
-  border: solid 1px white;
-  border-radius: 8px;
+    display: flex;
+    align-items: center;
+    /* background: var(--form-color); */
+    width: 70vw;
+    max-width: 320px;
+    height: 32px;
+    padding: 0px 10px;
+    border: solid 1px white;
+    border-radius: 8px;
 }
 .Input input {
-  width: 100%;
-  font-size: 15px;
-  background: none;
-  outline: none;
-  border: none;
-  height: 100%;
+    width: 100%;
+    font-size: 15px;
+    background: none;
+    outline: none;
+    border: none;
+    height: 100%;
 }
 .Input input::placeholder {
-  color: white;
-  opacity: 0.8;
+    color: white;
 }
