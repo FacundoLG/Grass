@@ -1,40 +1,40 @@
 .NoteForm {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.078);
-  width: 100vw;
-  height: 90%;
-  top: 60px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.078);
+    width: 100vw;
+    height: 90%;
+    top: 50px;
 }
 .form {
-  margin-top: 30px;
-  display: flex;
-  padding: 10px;
-  flex-direction: column;
-  width: 90vw;
-  max-width: 380px;
-  height: 260px;
-  background: var(--bg-color);
-  border-radius: 10px;
+    margin-top: 30px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    width: 90vw;
+    max-width: 380px;
+    height: 260px;
+    background: var(--bg-color);
+    border-radius: 10px;
 }
 .forminput {
-  background: none;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.222);
+    background: none;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.222);
 }
 .title {
-  font-size: 18px;
-  font-weight: 500;
-  padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 10px;
 }
 .text {
-  margin-top: 10px;
-  font-size: 15px;
-  font-weight: 500;
-  height: 90%;
-  padding: 10px;
-  resize: none;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    height: 90%;
+    padding: 10px;
+    resize: none;
 }

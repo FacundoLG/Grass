@@ -8,6 +8,7 @@
     padding: 0px 10px;
     border: solid 1px white;
     border-radius: 8px;
+    color: white;
 }
 .Input input {
     width: 100%;
@@ -16,6 +17,10 @@
     outline: none;
     border: none;
     height: 100%;
+    color: white;
+}
+.search {
+    background: rgba(0, 0, 0, 0.201);
 }
 .Input input::placeholder {
     color: white;

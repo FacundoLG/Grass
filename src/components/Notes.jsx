@@ -21,6 +21,15 @@ const Notes = () => {
 
     const addTask = (data) => {
         console.log(data)
+        fetch('http://localhost:3001/api', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8'
+            }
+        })
+            .then((response) => response.json())
+            .then((json) => console.log(json))
         setForm(false)
     }
     return (
@@ -43,12 +52,15 @@ const Notes = () => {
                 }}
             />
             <div className="noteContainer">
-                {notes.map((note) => (
-                    <div className="note">
-                        <h5>{note.title}</h5>
-                        <p>{note.content}</p>
-                    </div>
-                ))}
+                {notes.map((note) => {
+                    console.log(note)
+                    return (
+                        <div className="note" key={note.note_id + note.title}>
+                            <h5 className="noteTitle">{note.title}</h5>
+                            <p className="noteContent"> {note.content}</p>
+                        </div>
+                    )
+                })}
             </div>
         </div>
     )

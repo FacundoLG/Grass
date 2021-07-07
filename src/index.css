@@ -1,12 +1,12 @@
 * {
-  color: white;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    color: white;
 }
 body {
-  background: var(--bg-color);
+    background: var(--bg-color);
 }
 :root {
-  --header-main-color: #439134;
-  --brand-font-color: white;
-  --bg-color: rgb(35, 35, 35);
+    --header-main-color: #439134;
+    --brand-font-color: white;
+    --bg-color: rgb(35, 35, 35);
 }
