@@ -1,69 +1,68 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { connect } from 'react-redux'
 import '../styles/notes.css'
-import Input from './Input'
-import NoteForm from './NoteForm'
-const Notes = () => {
-    const [form, setForm] = useState(false)
-    const [inputTitle, setInputTitle] = useState('')
-    const [notes, setNotes] = useState([])
+import NoteInput from './NoteInput'
+import { getNotes } from '../redux/actions/index'
+import { apiNotes } from '../service/apiNotes'
+const Notes = (props) => {
+    const { notes } = props
+    const url = 'http://localhost:3001/api'
 
-    useEffect(() => {
-        fetch('http://localhost:3001/api')
-            .then((data) => data.json())
-            .then((data) => setNotes(data))
-    }, [])
-
-    const newTask = (title) => {
-        setInputTitle(title)
-        console.log(inputTitle)
-        setForm(true)
-    }
-
-    const addTask = (data) => {
-        console.log(data)
-        fetch('http://localhost:3001/api', {
-            method: 'POST',
+    const delteNote = (id) => {
+        var data = {
+            note_id: id
+        }
+        fetch(url, {
+            method: 'DELETE',
             body: JSON.stringify(data),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8'
             }
         })
-            .then((response) => response.json())
-            .then((json) => console.log(json))
-        setForm(false)
+            .then((res) => res.json())
+            .then(() => {
+                var newNotes = apiNotes(url)
+                props.getNotes(newNotes)
+            })
     }
     return (
         <div className="Notes">
-            {form ? (
-                <NoteForm
-                    title={inputTitle}
-                    ret={(data) => {
-                        addTask(data)
-                    }}
-                />
-            ) : (
-                ''
-            )}
-            <Input
-                note={true}
-                placeholder={'note title...'}
-                ret={(title) => {
-                    newTask(title)
-                }}
-            />
+            <NoteInput />
             <div className="noteContainer">
-                {notes.map((note) => {
-                    console.log(note)
-                    return (
-                        <div className="note" key={note.note_id + note.title}>
-                            <h5 className="noteTitle">{note.title}</h5>
-                            <p className="noteContent"> {note.content}</p>
-                        </div>
-                    )
-                })}
+                {notes
+                    ? notes.map((note) => {
+                          return (
+                              <div
+                                  className="note"
+                                  key={note.note_id + note.title}
+                              >
+                                  <h5 className="noteTitle">{note.title}</h5>
+                                  <p className="noteContent"> {note.content}</p>
+                                  <div className="buttonContainer">
+                                      <button
+                                          className="deleteButton"
+                                          onClick={() => {
+                                              delteNote(note.note_id)
+                                          }}
+                                      >
+                                          x
+                                      </button>
+                                  </div>
+                              </div>
+                          )
+                      })
+                    : ''}
             </div>
         </div>
     )
 }
+const mapStateToProps = (state) => {
+    return {
+        notes: state.notes
+    }
+}
+const mapDispatchToProps = {
+    getNotes
+}
 
-export default Notes
+export default connect(mapStateToProps, mapDispatchToProps)(Notes)

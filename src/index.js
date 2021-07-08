@@ -6,9 +6,11 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './redux/reducers';
 var intialState = {
-
+  notes: []
 }
-var store = createStore(reducers, intialState,)
+
+
+var store = createStore(reducers, intialState,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
   <React.StrictMode>

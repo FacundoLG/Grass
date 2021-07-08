@@ -6,14 +6,13 @@
 }
 .noteContainer {
     display: flex;
-    width: 100vw;
     flex-wrap: wrap;
     justify-content: center;
 }
 .note {
-    width: 30vw;
-    max-width: 300px;
-    min-width: 250px;
+    width: 28vw;
+    max-width: 320px;
+    min-width: 300px;
     height: auto;
     background: var(--header-main-color);
     margin: 10px 5px 0px 5px;
@@ -27,4 +26,15 @@
 .noteContent {
     padding-bottom: 5px;
     white-space: pre-line;
+}
+.deleteButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 12px;
+    top: -10px;
+    background: #00000048;
 }

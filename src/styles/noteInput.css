@@ -1,0 +1,57 @@
+.Noteinput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    transition: 200ms;
+}
+.inputTitle {
+    width: 70vw;
+    min-width: 300px;
+    min-height: 20px;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px;
+    background: rgb(53, 53, 53);
+}
+.container {
+    transition: 200ms;
+}
+.inputText {
+    width: 70vw;
+    min-width: 300px;
+    min-height: 100px;
+    background: none;
+    resize: none;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px;
+    margin-top: 8px;
+    background: rgb(53, 53, 53);
+    transition: 200ms;
+}
+.hide {
+    height: 0px;
+    padding: 0px 10px;
+    min-height: 0px;
+    transition: 200ms;
+    background: none;
+    border: none;
+}
+.bottom {
+    display: flex;
+    justify-content: flex-end;
+    transition: 200ms;
+}
+.bottom button {
+    background: rgb(53, 53, 53);
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 100ms;
+}

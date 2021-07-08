@@ -1,45 +1,45 @@
 .Header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  background: var(--header-main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background: var(--header-main-color);
 }
 .left {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 .brand {
-  margin-left: 5px;
-  color: var(--brand-font-color);
+    margin-left: 5px;
+    color: var(--brand-font-color);
 }
 .list {
-  margin-left: 10px;
-  transition: 200ms;
-  font-size: 30px;
-  border-radius: 20px;
-  padding: 3px;
+    margin-left: 10px;
+    transition: 200ms;
+    font-size: 30px;
+    border-radius: 20px;
+    padding: 3px;
 }
 .list:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 .list:active {
-  background: rgba(0, 0, 0, 0.153);
-  border-radius: 20px;
-  transition: 200ms;
+    background: rgba(0, 0, 0, 0.153);
+    border-radius: 20px;
+    transition: 200ms;
 }
 
 .icon {
-  font-size: 18px;
+    font-size: 18px;
 }
 .right {
-  display: flex;
-  align-items: center;
-  margin: 5px;
-  margin-right: 10px;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    margin-right: 10px;
 }
 @media (max-width: 360px) {
-  .brand {
-    display: none;
-  }
+    .brand {
+        display: none;
+    }
 }

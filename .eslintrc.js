@@ -1,3 +1,6 @@
 module.exports = {
-    "extends": "google"
+    "extends": "google",
+    "rules": {
+        "no-console": 1
+    }
 };

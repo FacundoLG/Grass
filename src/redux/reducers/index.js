@@ -1,8 +1,9 @@
 const reducers = (state, action) => {
     switch (action.type) {
-        case 'ADD_TASK':
+        case 'GET_NOTES':
             return {
                 ...state,
+                notes: action.payload
             }
         default:
             return state

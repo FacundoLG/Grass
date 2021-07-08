@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     /* background: var(--form-color); */
-    width: 70vw;
-    max-width: 320px;
+    width: 50%;
+    min-width: 230px;
     height: 32px;
     padding: 0px 10px;
     border: solid 1px white;
@@ -21,6 +21,9 @@
 }
 .search {
     background: rgba(0, 0, 0, 0.201);
+}
+.titleInput {
+    border: solid 1px white;
 }
 .Input input::placeholder {
     color: white;
