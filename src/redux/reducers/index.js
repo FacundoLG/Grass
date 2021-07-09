@@ -5,6 +5,11 @@ const reducers = (state, action) => {
                 ...state,
                 notes: action.payload
             }
+        case 'SET_NAV':
+            return{
+                ...state,
+                nav: !state.nav
+            }
         default:
             return state
     }

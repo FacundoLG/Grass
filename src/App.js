@@ -5,6 +5,7 @@ import Notes from './components/Notes';
 import './styles/buttons.css'
 import { connect } from 'react-redux';
 import { getNotes } from './redux/actions';
+import Navbar from './components/Navbar';
 function App(props) {
   useEffect(() => {
     fetch('http://localhost:3001/api')
@@ -16,6 +17,7 @@ function App(props) {
   return (
     <div className="App">
      <Header/>
+     <Navbar/>
      <Notes/>
     </div>
   );

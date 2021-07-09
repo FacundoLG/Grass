@@ -1,26 +1,34 @@
 import React, { useState } from 'react'
+import { connect } from 'react-redux'
+import { getNotes } from '../redux/actions'
 import '../styles/noteInput.css'
 
-const NoteInput = () => {
+const NoteInput = (props) => {
     const [active, setactive] = useState(false)
     const addTask = () => {
         var data = {
             title: document.getElementById('inputTitle').value,
             content: document.getElementById('noteInput').value
         }
-        fetch('http://localhost:3001/api', {
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8'
-            }
-        })
-            .then((response) => response.json())
-            .then((json) => console.log(json))
+        if (data.title.length >= 3 && data.content.length >= 3) {
+            fetch('http://localhost:3001/api', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8'
+                }
+            })
+                .then((response) => response.json())
+                .then((json) => {
+                    console.log(json)
+                    props.getNotes(json)
+                })
 
-        document.getElementById('inputTitle').value = ''
-        document.getElementById('noteInput').value = ''
+            document.getElementById('inputTitle').value = ''
+            document.getElementById('noteInput').value = ''
+        }
     }
+
     document.addEventListener('click', (e) => {
         var click = e.target.id
         if (click === 'inputTitle' || click === 'noteInput') {
@@ -53,7 +61,10 @@ const NoteInput = () => {
                     className={active ? 'inputText' : 'inputText hide'}
                 ></textarea>
                 <div className="bottom">
-                    <button className={active ? '' : 'hide'} onClick={addTask}>
+                    <button
+                        className={active ? '' : 'hide buttonHide'}
+                        onClick={addTask}
+                    >
                         Add
                     </button>
                 </div>
@@ -62,4 +73,7 @@ const NoteInput = () => {
     )
 }
 
-export default NoteInput
+const matDispathToProps = {
+    getNotes
+}
+export default connect(null, matDispathToProps)(NoteInput)

@@ -7,6 +7,7 @@ body {
 }
 :root {
     --header-main-color: #439134;
+    --header-main-color-op: #449134a8;
     --brand-font-color: white;
     --bg-color: rgb(35, 35, 35);
 }

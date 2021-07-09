@@ -6,7 +6,8 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './redux/reducers';
 var intialState = {
-  notes: []
+  notes: [],
+  nav: true
 }
 
 

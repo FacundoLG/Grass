@@ -1,22 +1,32 @@
 import React from 'react'
 import Input from './Input'
-import {BsList, BsCloudFill} from 'react-icons/bs'
+import { BsList, BsCloudFill } from 'react-icons/bs'
 import '../styles/header.css'
-const Header = () => {
+import { connect } from 'react-redux'
+import { setNav } from '../redux/actions'
+const Header = (props) => {
+    const handleNav = () => {
+        console.log('asdasds')
+        props.setNav()
+    }
     return (
         <div className="Header">
-           <div className="left">
-                <BsList className="list"/>
+            <div className="left">
+                <div onClick={handleNav}>
+                    <BsList className="list" />
+                </div>
                 <div>
                     <h2 className="brand">Grass</h2>
                 </div>
-           </div>
-           <Input search={true} placeholder="Find your notes..."/>
-           <div className="right">
-                <BsCloudFill className="icon"/>
-           </div>
+            </div>
+            <Input search={true} placeholder="Find your notes..." />
+            <div className="right">
+                <BsCloudFill className="icon" />
+            </div>
         </div>
     )
 }
-
-export default Header
+const mapDispathToProps = {
+    setNav
+}
+export default connect(null, mapDispathToProps)(Header)

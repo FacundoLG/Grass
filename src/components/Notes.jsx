@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import '../styles/notes.css'
 import NoteInput from './NoteInput'
 import { getNotes } from '../redux/actions/index'
-import { apiNotes } from '../service/apiNotes'
 const Notes = (props) => {
     const { notes } = props
     const url = 'http://localhost:3001/api'
@@ -20,9 +19,9 @@ const Notes = (props) => {
             }
         })
             .then((res) => res.json())
-            .then(() => {
-                var newNotes = apiNotes(url)
-                props.getNotes(newNotes)
+            .then((json) => {
+                console.log(json)
+                props.getNotes(json)
             })
     }
     return (

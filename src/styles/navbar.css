@@ -1,0 +1,40 @@
+.Navbar {
+    position: fixed;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    width: 165px;
+    background: var(--header-main-color-op);
+    transition: 200ms;
+}
+
+.listConainer {
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 140px;
+}
+.listConainer li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0px;
+    margin-top: 2px;
+    padding-left: 15px;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 20px;
+    border-radius: 8px;
+}
+.listConainer li:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.242);
+}
+.icon {
+    margin-right: 5px;
+}
+.hideNav {
+    display: none;
+}

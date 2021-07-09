@@ -6,6 +6,7 @@
 }
 .noteContainer {
     display: flex;
+    margin: 0px auto;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -26,6 +27,7 @@
 .noteContent {
     padding-bottom: 5px;
     white-space: pre-line;
+    overflow-wrap: break-word;
 }
 .deleteButton {
     display: flex;
