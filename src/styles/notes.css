@@ -16,7 +16,7 @@
 .note {
     width: 28vw;
     max-width: 320px;
-    min-width: 300px;
+    min-width: 290px;
     height: auto;
     background: var(--header-main-color);
     margin: 10px 5px 0px 5px;
@@ -42,4 +42,12 @@
     border-radius: 12px;
     top: -10px;
     background: #00000048;
+}
+.deleteButton:hover {
+    background: #00000071;
+    transition: 200ms;
+    cursor: pointer;
+}
+.xicon {
+    font-size: 15px;
 }

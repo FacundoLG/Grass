@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/navbar.css'
-import { BsPencil, BsBell, BsTag, BsTrash } from 'react-icons/bs'
+import { BsPencil, BsBell, BsTrash } from 'react-icons/bs'
 import { connect } from 'react-redux'
 import { setNav } from '../redux/actions'
 
@@ -20,12 +20,12 @@ const Navbar = (props) => {
                 </li>
                 <li className={navState ? '' : ' hideNav'}>
                     <BsBell className="icon" />
-                    Remainders
+                    Reminders
                 </li>
-                <li className={navState ? '' : ' hideNav'}>
+                {/* <li className={navState ? '' : ' hideNav'}>
                     <BsTag className="icon" />
                     Tags
-                </li>
+                </li> */}
                 <li className={navState ? '' : ' hideNav'}>
                     <BsTrash className="icon" />
                     Trash can

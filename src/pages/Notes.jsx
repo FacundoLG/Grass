@@ -1,8 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import '../styles/notes.css'
-import NoteInput from './NoteInput'
+import NoteInput from '../components/NoteInput'
 import { getNotes } from '../redux/actions/index'
+import { BsX } from 'react-icons/bs'
 const Notes = (props) => {
     const { notes } = props
     const url = 'http://localhost:3001/api'
@@ -44,7 +45,7 @@ const Notes = (props) => {
                                               delteNote(note.note_id)
                                           }}
                                       >
-                                          x
+                                          <BsX className="xicon" />
                                       </button>
                                   </div>
                               </div>
