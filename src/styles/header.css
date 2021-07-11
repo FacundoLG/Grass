@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 10vh;
     background: var(--header-main-color);
 }
 .left {
@@ -28,8 +28,7 @@
     border-radius: 20px;
     transition: 200ms;
 }
-
-.icon {
+.small {
     font-size: 18px;
 }
 .right {

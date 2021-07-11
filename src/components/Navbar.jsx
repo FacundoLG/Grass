@@ -2,9 +2,17 @@ import React from 'react'
 import '../styles/navbar.css'
 import { BsPencil, BsBell, BsTag, BsTrash } from 'react-icons/bs'
 import { connect } from 'react-redux'
-const Navbar = ({ navState }) => {
+import { setNav } from '../redux/actions'
+
+const Navbar = (props) => {
+    const { navState } = props
     return (
-        <div className={navState ? 'Navbar' : 'Navbar hideNav'}>
+        <div
+            className={navState ? 'Navbar' : 'Navbar hideNav'}
+            onClick={() => {
+                props.setNav()
+            }}
+        >
             <ul className="listConainer ">
                 <li className={navState ? '' : ' hideNav'}>
                     <BsPencil className="icon " />
@@ -29,4 +37,7 @@ const Navbar = ({ navState }) => {
 const MapStateToProps = (state) => ({
     navState: state.nav
 })
-export default connect(MapStateToProps)(Navbar)
+const MapDispachToProps = {
+    setNav
+}
+export default connect(MapStateToProps, MapDispachToProps)(Navbar)

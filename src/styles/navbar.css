@@ -1,20 +1,21 @@
 .Navbar {
     position: fixed;
     align-items: center;
+    overflow: hidden;
     height: 100vh;
     display: flex;
     width: 165px;
-    background: var(--header-main-color-op);
+    background: var(--header-main-color);
     transition: 200ms;
 }
 
 .listConainer {
     display: flex;
-    margin-left: 10px;
-    align-items: center;
+    margin-top: 20px;
+    margin-left: 15px;
     flex-direction: column;
+    align-items: center;
     height: 100%;
-    width: 140px;
 }
 .listConainer li {
     display: flex;
@@ -22,19 +23,28 @@
     width: 100%;
     padding: 8px 0px;
     margin-top: 2px;
-    padding-left: 15px;
     text-decoration: none;
     list-style-type: none;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 8px;
 }
-.listConainer li:hover {
+.listConainer > li:hover {
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.242);
 }
-.icon {
-    margin-right: 5px;
+.listConainer > li:hover .icon {
+    cursor: pointer;
+    transform: rotate(10deg);
+    transition: 200ms;
+}
+li .icon {
+    margin-right: 15px;
+    font-size: 25px;
 }
 .hideNav {
-    display: none;
+    width: 55px;
+}
+@media (max-width: 400px) {
+    .hideNav {
+        width: 0px;
+    }
 }

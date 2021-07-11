@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import reducers from './redux/reducers';
 var intialState = {
   notes: [],
-  nav: true
+  nav: false
 }
 
 

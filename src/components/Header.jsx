@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import { setNav } from '../redux/actions'
 const Header = (props) => {
     const handleNav = () => {
-        console.log('asdasds')
         props.setNav()
     }
     return (
@@ -21,7 +20,7 @@ const Header = (props) => {
             </div>
             <Input search={true} placeholder="Find your notes..." />
             <div className="right">
-                <BsCloudFill className="icon" />
+                <BsCloudFill className="icon small" />
             </div>
         </div>
     )

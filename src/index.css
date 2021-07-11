@@ -11,3 +11,22 @@ body {
     --brand-font-color: white;
     --bg-color: rgb(35, 35, 35);
 }
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--header-main-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--header-main-color-op);
+}
