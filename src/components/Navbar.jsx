@@ -3,7 +3,7 @@ import '../styles/navbar.css'
 import { BsPencil, BsBell, BsTrash } from 'react-icons/bs'
 import { connect } from 'react-redux'
 import { setNav } from '../redux/actions'
-
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 const Navbar = (props) => {
     const { navState } = props
     return (
@@ -13,23 +13,23 @@ const Navbar = (props) => {
                 props.setNav()
             }}
         >
-            <ul className="listConainer ">
-                <li className={navState ? '' : ' hideNav'}>
+            <ul className="listConainer">
+                <Link to="/" className="link">
                     <BsPencil className="icon " />
                     Notes
-                </li>
-                <li className={navState ? '' : ' hideNav'}>
+                </Link>
+                <Link to="/reminders" className="link">
                     <BsBell className="icon" />
                     Reminders
-                </li>
+                </Link>
                 {/* <li className={navState ? '' : ' hideNav'}>
                     <BsTag className="icon" />
                     Tags
                 </li> */}
-                <li className={navState ? '' : ' hideNav'}>
+                <Link to="/can" className="link">
                     <BsTrash className="icon" />
                     Trash can
-                </li>
+                </Link>
             </ul>
         </div>
     )

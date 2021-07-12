@@ -19,13 +19,14 @@ function App(props) {
   return (
     <div className="App">
      <Header/>
-     <Navbar/>
+
      <Router>
-          <Switch>
-              <Route path="/notes" component={Notes}/>
+      <Navbar/>
+            <Switch>
               <Route path="/reminders" component={Reminders}/>
-          </Switch>
-      </Router>
+              <Route path="/" component={Notes}/>
+            </Switch>
+     </Router>
     </div>
   );
 }

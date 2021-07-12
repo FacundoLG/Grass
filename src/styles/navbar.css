@@ -8,7 +8,9 @@
     background: var(--header-main-color-op);
     transition: 200ms;
 }
-
+.link {
+    text-decoration: none;
+}
 .listConainer {
     display: flex;
     margin-top: 20px;
@@ -17,7 +19,7 @@
     align-items: center;
     height: 100%;
 }
-.listConainer li {
+.listConainer .link {
     display: flex;
     align-items: center;
     width: 100%;
@@ -25,17 +27,17 @@
     margin-top: 2px;
     text-decoration: none;
     list-style-type: none;
-    font-size: 15px;
+    font-size: 18px;
 }
-.listConainer > li:hover {
+.listConainer > .link:hover {
     cursor: pointer;
 }
-.listConainer > li:hover .icon {
+.listConainer > .link:hover .icon {
     cursor: pointer;
     transform: rotate(10deg);
     transition: 200ms;
 }
-li .icon {
+.link .icon {
     margin-right: 15px;
     font-size: 25px;
 }

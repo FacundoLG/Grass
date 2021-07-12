@@ -4,6 +4,7 @@ import '../styles/notes.css'
 import NoteInput from '../components/NoteInput'
 import { getNotes } from '../redux/actions/index'
 import { BsX } from 'react-icons/bs'
+import { withRouter } from 'react-router-dom'
 const Notes = (props) => {
     const { notes } = props
     const url = 'http://localhost:3001/api'
@@ -26,7 +27,7 @@ const Notes = (props) => {
             })
     }
     return (
-        <div className="Notes">
+        <div className="Container">
             <NoteInput />
             <div className="noteContainer">
                 {notes
@@ -65,4 +66,4 @@ const mapDispatchToProps = {
     getNotes
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Notes)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Notes))
