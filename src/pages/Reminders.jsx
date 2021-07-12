@@ -1,9 +1,11 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
+import ReminderInput from '../components/ReminderInput'
 import '../styles/reminders.css'
 const Reminders = () => {
     return (
         <div className="Container">
+            <ReminderInput />
             <div className="remainder">
                 <div className="upRemainder">
                     <div>Estudiar</div>

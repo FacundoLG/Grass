@@ -10,6 +10,7 @@ body {
     --header-main-color-op: #243a20;
     --brand-font-color: white;
     --bg-color: rgb(35, 35, 35);
+    --input-color: rgb(53, 53, 53);
 }
 /* width */
 ::-webkit-scrollbar {

@@ -1,0 +1,26 @@
+.Reminder {
+    margin-bottom: 10px;
+}
+.reminderContainer {
+    display: flex;
+    flex-direction: column;
+}
+.reminderContainer input {
+    background: none;
+    border: none;
+    background: var(--input-color);
+    margin: 2px;
+    min-height: 30px;
+    width: 295px;
+    border-radius: 5px;
+    padding: 2px 5px;
+    outline: none;
+}
+.reminderContainer .time {
+    width: 200px;
+}
+.Reminder .line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
