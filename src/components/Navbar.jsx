@@ -18,18 +18,18 @@ const Navbar = (props) => {
                     <BsPencil className="icon " />
                     Notes
                 </Link>
-                <Link to="/reminders" className="link">
+                {/* <Link to="/reminders" className="link">
                     <BsBell className="icon" />
                     Reminders
                 </Link>
-                {/* <li className={navState ? '' : ' hideNav'}>
+                <li className={navState ? '' : ' hideNav'}>
                     <BsTag className="icon" />
                     Tags
-                </li> */}
+                </li>
                 <Link to="/can" className="link">
                     <BsTrash className="icon" />
                     Trash can
-                </Link>
+                </Link> */}
             </ul>
         </div>
     )
